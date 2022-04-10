@@ -1,6 +1,8 @@
-FROM qwe1/dind-ansible-molecule:root
+FROM geerlingguy/docker-debian11-ansible:latest
 
-RUN rm -f /lib/systemd/system/multi-user.target.wants/getty.target
+RUN apt update && apt install -y curl apt-utils
+RUN curl -fsSL https://get.docker.com -o get-docker.sh
+RUN sh get-docker.sh
 
 VOLUME ["/sys/fs/cgroup"]
 CMD ["/lib/systemd/systemd"]
