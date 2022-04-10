@@ -6,8 +6,6 @@ on:
   push:
     branches:
       - master
-  schedule:
-    - cron: "10 1 * * 4"
 
 jobs:
   # Test the image builds and works correctly.
