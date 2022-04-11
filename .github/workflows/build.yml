@@ -50,4 +50,4 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.repository }}:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/dind-ansible-molecule:latest
