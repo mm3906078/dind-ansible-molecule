@@ -5,4 +5,4 @@ RUN curl -fsSL https://get.docker.com -o get-docker.sh
 RUN sh get-docker.sh
 
 VOLUME ["/sys/fs/cgroup"]
-CMD ["/sbin/init"]
+CMD ["/lib/systemd/systemd"]
